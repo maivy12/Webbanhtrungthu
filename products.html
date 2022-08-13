@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./bootstrap-4.0.0/dist/css/bootstrap.css">
+    <script src="./bootstrap-4.0.0/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./aos-master/dist/aos.css">
+    <script src="./aos-master/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    </style>
+</head>
+<body onscroll="neo_thanh_header()">
+
+    <!-- Header & background ------------------------------------->
+    <div id="header_sidebar">
+        <div id="logo">
+            <a href="#">Bình An</a>
+        </div>
+        <div id="menu">
+            <div class="item">
+                <a href="#">Giới thiệu</a>
+            </div>
+            <div class="item">
+                <a href="#">Trang chủ</a>
+            </div>
+            <div class="item">
+                <a href="#">Sản phẩm</a>
+                
+            </div>
+            <div class="item">
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="item">
+                <a href="#">Blog</a>
+            </div>
+        </div>
+        <div id="icon">
+            <div class="icon">
+                    <i class="fa fa-search"></i>
+                    <i class="fa fa-shopping-cart" onclick="showCart()"><span class="cart_note"></span></i>
+                    <i class="fa fa-user"></i>
+                    <i onclick="hienthi()" id="gach" class="fa fa-list-ul"></i>
+            </div>
+        </div>
+    </div>
+    <div class="header" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+        <div class="overlay_header"></div>
+        <div class="mooncake_icon" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+            <img src="./img/moon-cake (1).png" alt="" class="mooncake_icon__img">
+        </div>
+        <p class="header__slogan" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="900">TRAO NHAU THÀNH Ý VÀNG ,<br>SÁNG MÃI CHUYỆN ĐÊM TRĂNG</p>
+        <button class="header__bnt" data-aos="fade-up" data-aos-duration="1800" data-aos-delay="1200">Mua ngay</button>
+    </div>
+    <div class="list_support">
+        <li class="list_icon"><i class="fab fa-facebook-messenger"></i></li>
+        <li class="list_icon"><i class="fa fa-phone"></i></li>
+        <li class="list_icon"><i class="fa fa-envelope"></i></li>
+    </div>
+    <div>
+        <div class="an_black" id="menu_black">
+            <i onclick="an()" id="remove_black" class="fa fa-times"></i>
+            <div class="item_black">
+                <a href="#">Giới thiệu</a>
+            </div>
+            <div class="item_black">
+                <a href="#">Trang chủ</a>
+            </div>
+            <div class="item_black">
+                <a href="#">Sản phẩm</a>
+                
+            </div>
+            <div class="item_black">
+                <a href="#">Liên hệ</a>
+            </div>
+            <div class="item_black">
+                <a href="#">Blog</a>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------>
+    <section class="cacloaibanh"> 
+        <div class="mooncakes">
+            <div class="overlay"> </div>
+             <img class="mooncakes__img" src = "./img/banh-trung-thu-ngon.jpg" />
+            <h2 class="mooncakes__name">BÁNH NƯỚNG </h2>
+            <p class = "shop">Mua ngay</p>
+        </div>
+        <div class="mooncakes">
+            <div class="overlay"> </div>
+             <img class="mooncakes__img" src = "./img/bánhdeo.jfif" />
+            <h2 class="mooncakes__name">BÁNH DẺO </h2>
+            <p class = "shop">Mua ngay</p>
+        </div>
+        <div class="mooncakes">
+            <div class="overlay"> </div>
+             <img class="mooncakes__img" src = "./img/trứngchay.jfif" />
+            <h2 class="mooncakes__name">BÁNH LAVA TRỨNG CHẢY </h2>
+            <p class = "shop">Mua ngay</p>
+        </div>
+        <div class="mooncakes">
+            <div class="overlay"> </div>
+             <img class="mooncakes__img" src = "img/banh-trung-thu-tuyet.jpg" />
+            <h2 class="mooncakes__name">BÁNH TRUNG THU TUYẾT </h2>
+            <p class = "shop">Mua ngay</p>
+        </div>
+    </section>
+
+    <!---Products----------------------------------------------------------------------------->
+
+    <h1>SẢN PHẨM</h1>
+    <p class="intro">Bánh trung thu là món quà ý nghĩa cho gia đình và những ngươì thân yêu của bạn mỗi dịp trăng rằm. Sản phẩm của chúng tôi luôn sử dụng những nguyên liệu tươi ngon, thượng hạng để dành tặng bạn và gia đình những điều tuyệt vời nhất.</p>
+    <div class="categories">
+        <p onclick="renderProduct(nuong)">Bánh nướng</p>
+        <span class="vertical_line"></span>
+        <p onclick="renderProduct(deo)">Bánh dẻo</p>
+        <span class="vertical_line"></span>
+        <p onclick="renderProduct(tuyet)">Bánh trung thu tuyết</p>
+        <span class="vertical_line"></span>
+        <p onclick="renderProduct(lava)">Bánh LAVA trứng chảy</p>
+        <span class="vertical_line"></span>
+        <p onclick="renderProduct(trangvang)">Bánh cao cấp Trăng Vàng</p>
+    </div>
+    <div class="product_list">
+        <div class="product_container">
+            <div class="image_box">
+                <img src="images/nuong_dau_do_nhat.webp">
+                <ul>
+                    <li>
+                        <i class="fa fa-search-plus"></i>
+                        <span>Xem chi tiết</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-cart-plus"></i>
+                        <span>Thêm vào giỏ hàng</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-heart"></i>
+                        <span>Yêu thích</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-arrows-alt-h"></i>                 
+                        <span>So sánh</span>
+                    </li>
+                </ul>
+            </div>
+            <h3 id="product_name">Đậu Đỏ Kiểu Nhật</h3>
+            <h5 id="price">95000</h5>
+            <p id="product_info" style="display: none">Bánh Trung Thu Kinh Đô 2019, Bánh Dẻo Hạt Sen (0 Trứng), - Chuyên cung cấp bánh trung thu kinh đô với chiết khấu cao, giá rẻ hơn giá công ty, giao hàng tận nơi.</p>
+        </div>
+    </div>
+
+        <!--info popup--------------------------------------------->
+        <div class="modal_info">
+            <div class="modal_inner">
+                <i class="fa fa-times"></i> 
+                <div class="modal_info_content">
+                    <img class="modal_info_image" src="">
+                    <div class="modal_info_text">
+                        <h3></h3>
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- cart ------------------------------------------------------>
+    <div class="cart">
+        <i class="fa fa-times" onclick="showCart()"></i>
+        <h2>Giỏ hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Sản phẩm</td>
+                        <td>Giá</td>
+                        <td>Số lượng</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <p class="total">Tổng hóa đơn:<span class="total_number"></span></p>
+            <button>THANH TOÁN</button>
+    </div>
+
+    <!-- Thông báo thêm sản phẩm thành công ----------------------------------------->
+    <div class="modal">
+        <div class="congrats_popup">
+            <i class="fa fa-times"></i> 
+            <b>Bạn đã thêm sản phẩm thành công!</b>
+            <audio style="display:none">
+                <source src="images/tada-fanfare-a-6313.mp3">
+            </audio> 
+        </div>
+    </div>
+
+<!------------------------------------------------------------------------------------>
+    <section class="discount">
+        <p>Đăng ký nhận khuyến mãi</p>
+       <div class="discount_inp">
+           <input class="" type="email" placeholder="Nhập vào email của bạn" ></input>
+         <span>Gửi</span>
+    </div>
+    </section>
+
+    <footer>
+        <div class="storeinformation">
+            <div class="store_contacts">
+                <a href="#" class="store_name"> Bình <span>An</span></a>
+                <div class="store_socialmedia">
+                <i class='bx bxl-facebook'></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-pinterest-alt' ></i>
+                <i class='bx bxl-instagram' ></i>
+            </div>
+            </div>
+            <div class="footer_link">
+                
+                <h3>SẢN PHẨM</h3>
+                <ul>
+                    <li>Bánh Nướng</li>
+                    <li>Bánh Dẻo</li>
+                    <li>Bánh Lava Trứng Chảy</li>
+                    <li>Bánh Trung Thu Tuyết</li>
+                    <li>Bánh Cao Cấp Trăng Vàng</li>
+
+                </ul>
+            </div>
+            <div class="footer_link">
+                <h3>THÔNG TIN </h3>
+                <ul>
+                    <li>Giới Thiệu</li>
+                    <li> Liên Hệ</li>
+                    <li>Đối Tác</li>
+                    <li>Tuyển Dụng</li>
+
+                </ul>
+            </div>
+            <div class="footer_link">
+                <h3>CHÍNH SÁCH</h3>
+                <ul>
+                    <li>Chính sách đổi hàng
+                    </li>
+                    <li>Chính sách bảo hành
+                    </li>
+                    <li>Chính sách bảo mật
+                    </li>
+                    <li>Chính sách hoàn tiền
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer_link">
+                <h3>CHĂM SÓC KHÁCH HÀNG
+                </h3>
+                <ul>
+                    <li></li>
+                    <li>Thanh toán và vận chuyển
+                    </li>
+                    <li>Câu hỏi thường gặp
+                    </li>
+                    <li>Kiểm tra thông tin đơn hàng
+                    </li>
+                    <li>Hướng dẫn chọn bánh
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="products.js"></script>
+</body>
+</html>
